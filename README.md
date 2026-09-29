@@ -1,75 +1,46 @@
-# Entorno de Desarrollo Docker LEMP (Nginx + PHP 8.3 + MySQL)
+# Práctica UD1: Entorno de desarrollo con Docker (Nginx, PHP 8.3 y MySQL)
 
-Este proyecto sustituye el modelo clásico monolítico (como XAMPP) por una arquitectura basada en contenedores Docker independientes, aislados y desechables para cada servicio.
+Proyecto de despliegue de un entorno LEMP modular utilizando Docker y Docker Compose, sustituyendo la instalación local tradicional de paquetes tipo XAMPP por contenedores independientes y aislados.
 
----
+## Servicios
 
-## 🛠️ Arquitectura de Contenedores
+El entorno está compuesto por tres contenedores interconectados mediante `docker-compose.yml`:
 
-Definidos y orquestados mediante un único `docker-compose.yml`:
+- **web (Nginx)**: Servidor web que escucha en el puerto host 8080 y redirige las peticiones al contenedor de PHP mediante FastCGI.
+- **php (PHP-FPM 8.3)**: Intérprete de PHP construido a partir de `php/Dockerfile`, con la extensión `pdo_mysql` instalada.
+- **db (MySQL 8.0)**: Base de datos MySQL con almacenamiento persistente mediante volumen Docker.
 
-| Contenedor | Servicio | Imagen / Build | Descripción |
-| :--- | :--- | :--- | :--- |
-| **`web`** | Nginx | `nginx:alpine` | Recibe peticiones HTTP en el puerto host `8080` y las reenvía a PHP vía FastCGI. |
-| **`php`** | PHP-FPM | Dockerfile (`php:8.3-fpm-alpine`) | Ejecuta el código PHP 8.3 con soporte PDO para MySQL. |
-| **`db`** | MySQL | `mysql:8.0` | Almacena los datos de la aplicación de forma persistente. |
+## Estructura del repositorio
 
----
+- `docker-compose.yml`: Definición, variables y conexión de los tres servicios.
+- `nginx/default.conf`: Configuración de Nginx y comunicación con PHP-FPM.
+- `php/Dockerfile`: Construcción de la imagen PHP 8.3 con soporte PDO.
+- `src/index.php`: Script de prueba que comprueba la versión de PHP y realiza lectura y escritura en MySQL vía PDO.
+- `Captura.png`: Captura de pantalla del resultado.
 
-## 📁 Estructura del Proyecto
+## Instrucciones de uso
 
-```text
-├── docker-compose.yml   # Definición y conexión de los tres servicios
-├── nginx/
-│   └── default.conf     # Configuración del virtualhost y proxy FastCGI
-├── php/
-│   └── Dockerfile       # Imagen PHP 8.3 con extensión pdo_mysql
-├── src/
-│   └── index.php        # Script de prueba (comprobación PHP 8.3 y conexión PDO)
-├── .gitignore
-└── README.md
-```
-
----
-
-## 🚀 Cómo levantar el entorno
-
-### 1. Requisitos previos
-- Tener instalado **Docker** y **Docker Compose** (por ejemplo, con Docker Desktop).
-
-### 2. Iniciar los contenedores
-Ejecuta el siguiente comando en la raíz del proyecto:
+### 1. Iniciar los contenedores
+Para construir e iniciar los servicios en segundo plano:
 
 ```bash
-docker compose up -d --build
+docker compose up -d
 ```
 
-Esto descargará las imágenes, compilará el contenedor de PHP e iniciará los tres servicios en segundo plano.
+### 2. Comprobar el funcionamiento
+Abrir en el navegador:
 
-### 3. Comprobar el funcionamiento
-Abre tu navegador web y visita:
+http://localhost:8080
 
-👉 **[http://localhost:8080](http://localhost:8080)**
-
-Verás la interfaz con el estado en tiempo real de los tres servicios y una inserción/consulta de prueba en MySQL mediante PDO.
-
-### 4. Detener el entorno
-Para detener los contenedores:
+### 3. Detener los contenedores
+Para parar los servicios:
 
 ```bash
 docker compose down
 ```
 
-Si además deseas eliminar los volúmenes de datos:
+## Resultado
 
-```bash
-docker compose down -v
-```
+Captura de pantalla de la comprobación del entorno en funcionamiento:
 
----
-
-## 📸 Captura de Pantalla
-
-A continuación se muestra la captura de pantalla del entorno funcionando en `http://localhost:8080`:
-
-![Captura del resultado](Captura.png)
+![Resultado](Captura.png)
