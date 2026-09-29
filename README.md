@@ -4,13 +4,7 @@ En este proyecto he montado un servidor con Nginx, PHP 8.3 y MySQL usando Docker
 
 ## Cómo levantarlo
 
-Para arrancar los tres contenedores solo tenemos que ejecutar en la terminal:
-
-```bash
-docker compose up -d
-```
-
-Una vez iniciado, entramos desde el navegador en http://localhost:8080 para ver que todo funciona correctamente.
+Para arrancar los tres contenedores solo tenemos que ejecutar en la terminal `docker compose up -d`. Una vez iniciado, entramos desde el navegador en http://localhost:8080 para ver que todo funciona correctamente.
 
 ## Resultado
 
