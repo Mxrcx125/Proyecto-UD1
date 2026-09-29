@@ -1,46 +1,43 @@
-# Práctica UD1: Entorno de desarrollo con Docker (Nginx, PHP 8.3 y MySQL)
+# Práctica UD1 - Servidor con Docker (Nginx, PHP y MySQL)
 
-Proyecto de despliegue de un entorno LEMP modular utilizando Docker y Docker Compose, sustituyendo la instalación local tradicional de paquetes tipo XAMPP por contenedores independientes y aislados.
+En esta práctica he montado un entorno de desarrollo web usando contenedores de Docker en lugar de instalar el paquete típico de XAMPP en el ordenador. De esta forma, cada servicio funciona por separado en su propio contenedor independiente.
 
-## Servicios
+## ¿Qué contenedores he creado?
 
-El entorno está compuesto por tres contenedores interconectados mediante `docker-compose.yml`:
+He configurado tres contenedores dentro del archivo `docker-compose.yml`:
 
-- **web (Nginx)**: Servidor web que escucha en el puerto host 8080 y redirige las peticiones al contenedor de PHP mediante FastCGI.
-- **php (PHP-FPM 8.3)**: Intérprete de PHP construido a partir de `php/Dockerfile`, con la extensión `pdo_mysql` instalada.
-- **db (MySQL 8.0)**: Base de datos MySQL con almacenamiento persistente mediante volumen Docker.
+- **web**: Usamos Nginx para recibir las peticiones en el puerto 8080 y pasárselas a PHP.
+- **php**: Ejecuta el código con PHP 8.3. He creado un `Dockerfile` propio para instalarle la extensión `pdo_mysql`, que hace falta para conectarse a la base de datos.
+- **db**: Base de datos MySQL donde guardamos los datos.
 
-## Estructura del repositorio
+## Archivos del proyecto
 
-- `docker-compose.yml`: Definición, variables y conexión de los tres servicios.
-- `nginx/default.conf`: Configuración de Nginx y comunicación con PHP-FPM.
-- `php/Dockerfile`: Construcción de la imagen PHP 8.3 con soporte PDO.
-- `src/index.php`: Script de prueba que comprueba la versión de PHP y realiza lectura y escritura en MySQL vía PDO.
-- `Captura.png`: Captura de pantalla del resultado.
+- `docker-compose.yml`: Archivo donde definimos y conectamos los tres contenedores.
+- `nginx/default.conf`: La configuración de Nginx para que se comunique con PHP.
+- `php/Dockerfile`: Lo usamos para crear la imagen de PHP 8.3 con PDO.
+- `src/index.php`: Un archivo PHP sencillo que he hecho para comprobar que la versión es PHP 8.3 y que la conexión con MySQL funciona bien.
+- `Captura.png`: Captura de pantalla donde se ve todo funcionando.
 
-## Instrucciones de uso
+## Cómo ponerlo en marcha
 
-### 1. Iniciar los contenedores
-Para construir e iniciar los servicios en segundo plano:
+1. Para descargar las imágenes y arrancar todos los contenedores a la vez, ejecutamos:
 
 ```bash
 docker compose up -d
 ```
 
-### 2. Comprobar el funcionamiento
-Abrir en el navegador:
+2. Una vez que termine de arrancar, abrimos el navegador y entramos en:
 
 http://localhost:8080
 
-### 3. Detener los contenedores
-Para parar los servicios:
+3. Si queremos apagar los contenedores cuando terminemos, usamos:
 
 ```bash
 docker compose down
 ```
 
-## Resultado
+## Captura del resultado
 
-Captura de pantalla de la comprobación del entorno en funcionamiento:
+Aquí dejo la captura de pantalla de la página web funcionando en el puerto 8080:
 
 ![Resultado](Captura.png)
