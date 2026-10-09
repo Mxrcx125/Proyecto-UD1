@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 // ============================================================
 // inc/heroe.php — Constantes y datos del héroe (Variante B · Hechicero)
-// Módulo 0613 DWES · UD2 · Forja de Héroes
+// Autor/a: Marco García Ruiz · Módulo 0613 DWES · UD2 · Forja de Héroes
 // Solo PHP puro, sin etiqueta de cierre.
 // ============================================================
 

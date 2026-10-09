@@ -1,6 +1,6 @@
 # Memoria · Reto UD2 «Forja de Héroes»
 
-**Alumno/a:** (Escribe aquí tu nombre y apellidos) · **Variante:** B · Hechicero · **Fecha:** 7 de octubre de 2026
+**Alumno/a:** Marco García Ruiz · **Variante:** B · Hechicero · **Fecha:** 7 de octubre de 2026
 
 > Las capturas van en la carpeta `capturas/` y se enlazan así: `![descripción](capturas/nombre.png)`
 

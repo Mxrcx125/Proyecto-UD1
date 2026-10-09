@@ -5,7 +5,7 @@ declare(strict_types=1);
  * =====================================================================
  *  ficha.php · Forja de Héroes · UD2 · Reto evaluable
  * =====================================================================
- *  Variante B · Hechicero (Aldric <el Arcano>)
+ *  Autor/a: Marco García Ruiz · Variante B · Hechicero (Aldric <el Arcano>)
  *
  *  Estructura OBLIGATORIA (como en el paso 09 del caso guiado):
  *   1) directiva strict_types

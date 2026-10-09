@@ -5,7 +5,7 @@ declare(strict_types=1);
  * =====================================================================
  *  diagnostico.php · Panel de directivas del servidor          [CE 2.f]
  * =====================================================================
- *  Variante B · Hechicero
+ *  Autor/a: Marco García Ruiz · Variante B · Hechicero
  */
 
 // 1. Directivas leídas con ini_get
