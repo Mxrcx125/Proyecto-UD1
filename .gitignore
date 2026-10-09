@@ -8,3 +8,6 @@
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Archivos comprimidos de entrega
+*.zip
