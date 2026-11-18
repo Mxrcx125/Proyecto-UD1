@@ -1,0 +1,6 @@
+# Ignorar documentos y archivos temporales
+*.docx
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

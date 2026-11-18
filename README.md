@@ -1,11 +1,34 @@
-# Práctica UD1: Servidor con Docker
+# Prácticas de Desarrollo Web en Entorno Servidor
 
-En este proyecto he montado un servidor con Nginx, PHP 8.3 y MySQL usando Docker Compose en lugar de XAMPP. Cada servicio va en su propio contenedor: Nginx recibe las peticiones en el puerto 8080 y se las pasa a PHP, y desde PHP nos conectamos a la base de datos MySQL mediante PDO.
+Este repositorio contiene las prácticas y retos organizados de la asignatura:
 
-## Cómo levantarlo
+---
 
-Para arrancar los tres contenedores solo tenemos que ejecutar en la terminal *docker compose up -d*. Una vez iniciado, entramos desde el navegador en http://localhost:8080 para ver que todo funciona correctamente.
+## 📁 Estructura del Repositorio
 
-## Resultado
+### 🔹 [UD1 - Servidor con Docker](UD1/README.md)
+Despliegue de un entorno de servidor web contenerizado con:
+- **Nginx** como servidor web (puerto 8080).
+- **PHP 8.3** (PHP-FPM con extensión PDO MySQL).
+- **MySQL 8.0** para la base de datos relacional.
+- Gestión orquestada mediante **Docker Compose**.
 
-![Captura del resultado](Captura.png)
+> Consulta los detalles y la guía de inicio en [UD1/README.md](UD1/README.md).
+
+---
+
+### 🔹 [UD2 - Reto «Forja de Héroes»](UD2/forja-heroes/MEMORIA.md)
+Práctica de programación en PHP y despliegue:
+- **Variante:** Hechicero (Variante B).
+- **Contenido:** Ficha de personaje con cálculos dinámicos de atributos, maná, daño y panel de diagnóstico.
+- **Entorno:** Nginx + PHP 8.4 en Docker Compose.
+- **Memoria técnica y capturas:** Ubicadas en `UD2/forja-heroes/`.
+- **Archivos de entrega:** Archivos `.zip` comprimidos en `UD2/entregas/`.
+
+---
+
+### 🔹 [Gremio - Gremio de Aventureros (UD3 · UD4 · UD5)](Gremio/gremio/LEEME.md)
+Proyecto de gestión de misiones, sesiones, persistencia en base de datos PDO y autenticación:
+- **Contenido:** Inicio de sesión, tablón de misiones, zurrón, preferencias y control de sesiones.
+- **Base de datos:** Script SQL en `Gremio/gremio/sql/gremio.sql`.
+- **Código y documentación:** Ubicados en [Gremio/gremio](Gremio/gremio).
