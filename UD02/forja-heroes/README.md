@@ -1,4 +1,4 @@
-# 🛡️ UD02: Reto «Forja de Héroes» y «Gremio»
+# UD02: Reto «Forja de Héroes» y «Gremio»
 
 Entorno contenerizado con **Nginx** y **PHP 8.4-FPM** sobre Alpine Linux para las prácticas de servidor de la UD02.
 
@@ -7,7 +7,7 @@ Entorno contenerizado con **Nginx** y **PHP 8.4-FPM** sobre Alpine Linux para la
 
 ---
 
-## 🚀 Despliegue del Entorno
+## Despliegue del Entorno
 
 Para levantar el servidor web y PHP:
 
@@ -22,7 +22,7 @@ docker compose down
 
 ---
 
-## 📌 Proyectos Incluidos
+## Proyectos Incluidos
 
 ### 1. Forja de Héroes
 Ficha técnica del personaje Hechicero con cálculos matemáticos, barras dinámicas Unicode y tipado estricto:

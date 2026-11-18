@@ -1,4 +1,4 @@
-# 🚀 Desarrollo Web en Entorno Servidor (DWES)
+# Desarrollo Web en Entorno Servidor (DWES)
 
 [![PHP](https://img.shields.io/badge/PHP-8.3%20%7C%208.4-777bb4?logo=php&logoColor=white)](https://www.php.net/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ed?logo=docker&logoColor=white)](https://www.docker.com/)
@@ -12,18 +12,18 @@ Repositorio de prácticas y retos de la asignatura **Desarrollo Web en Entorno S
 
 ---
 
-## 📑 Tabla de Contenidos
+## Tabla de Contenidos
 
-1. [Estructura del Repositorio](#-estructura-del-repositorio)
-2. [UD01 · Servidor con Docker](#-ud01--servidor-con-docker)
-3. [UD02 · Reto «Forja de Héroes»](#-ud02--reto-forja-de-héroes)
-4. [Proyecto Integrado · «Gremio de Aventureros»](#-proyecto-integrado--gremio-de-aventureros)
-5. [Tabla de Rutas y Accesos](#-tabla-de-rutas-y-accesos)
-6. [Requisitos Previos](#-requisitos-previos)
+1. [Estructura del Repositorio](#estructura-del-repositorio)
+2. [UD01: Servidor con Docker](#ud01-servidor-con-docker)
+3. [UD02: Reto «Forja de Héroes»](#ud02-reto-forja-de-héroes)
+4. [Proyecto Integrado: «Gremio de Aventureros»](#proyecto-integrado-gremio-de-aventureros)
+5. [Tabla de Rutas y Accesos](#tabla-de-rutas-y-accesos)
+6. [Requisitos Previos](#requisitos-previos)
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 Proyecto-UD1/
@@ -59,7 +59,7 @@ Proyecto-UD1/
             ├── inc/heroe.php
             ├── ficha.php                   <-- Reto Forja de Héroes (Hechicero)
             ├── diagnostico.php             <-- Panel de diagnóstico PHP
-            └── gremio/                     <-- ⚔️ Proyecto Gremio (UD3 · UD4 · UD5)
+            └── gremio/                     <-- Proyecto Gremio (UD3 · UD4 · UD5)
                 ├── LEEME.md
                 ├── MEMORIA.md
                 ├── UD5_Gremio_Enunciado.docx
@@ -77,7 +77,7 @@ Proyecto-UD1/
 
 ---
 
-## 🔹 UD01 · Servidor con Docker
+## UD01: Servidor con Docker
 
 Configuración y despliegue de una arquitectura contenerizada multi-servicio:
 
@@ -94,7 +94,7 @@ Acceso desde el navegador: `http://localhost:8080`
 
 ---
 
-## 🔹 UD02 · Reto «Forja de Héroes»
+## UD02: Reto «Forja de Héroes»
 
 Reto de programación orientada a la lógica de servidor en PHP 8.4:
 
@@ -116,7 +116,7 @@ docker compose up -d
 
 ---
 
-## ⚔️ Proyecto Integrado · «Gremio de Aventureros»
+## Proyecto Integrado: «Gremio de Aventureros»
 
 Ubicado dentro del servidor web de la UD02 en `UD02/forja-heroes/src/gremio/`. Este proyecto abarca los conceptos de desarrollo avanzado en PHP:
 
@@ -144,7 +144,7 @@ Ubicado dentro del servidor web de la UD02 en `UD02/forja-heroes/src/gremio/`. E
 
 ---
 
-## 🌐 Tabla de Rutas y Accesos
+## Tabla de Rutas y Accesos
 
 Con el contenedor de la UD02 activo (`docker compose up -d` en `UD02/forja-heroes`):
 
@@ -158,7 +158,7 @@ Con el contenedor de la UD02 activo (`docker compose up -d` en `UD02/forja-heroe
 
 ---
 
-## ⚙️ Requisitos Previos
+## Requisitos Previos
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado y en ejecución con soporte para WSL2 (en Windows).
 - [Git](https://git-scm.com/) para clonar y gestionar el repositorio.
